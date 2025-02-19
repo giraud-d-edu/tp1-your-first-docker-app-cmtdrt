@@ -1,0 +1,419 @@
+/* Réinitialisation de base pour assurer la cohérence */
+body, h1, h2, h3, p, ul, li, a, form, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Couleurs et typographie */
+:root {
+    --primary-color: #0077cc; /* Bleu principal */
+    --secondary-color: #f4f4f4; /* Fond clair */
+    --text-color: #333; /* Texte principal */
+    --nav-bg-color: #004080; /* Couleur de la nav-bar */
+    --nav-link-color: #fff; /* Liens dans la nav-bar */
+    --footer-bg-color: #003366; /* Couleur du pied de page */
+    --footer-text-color: #fff; /* Texte du pied de page */
+}
+
+/* Corps principal */
+body {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Barre de navigation */
+header {
+    background-color: var(--nav-bg-color);
+    padding: 1rem 0;
+}
+
+/* Conteneur de navigation */
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Conteneur du logo */
+.logo-container {
+    margin-bottom: 10px;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Liste de navigation */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 13rem; /* Espacement entre les éléments */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* page Accueil */
+main {
+    padding: 0rem;
+    text-align: center;
+}
+
+main h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+main p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+main img {
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+/* Page installations */
+/* slider des salles */
+.slider-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slider-images{
+    display: flex;
+    align-items: center;
+    gap: 21px;
+  }
+  .slider-images img{
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.9); 
+  }
+  .slider-img{
+    width: 110px;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.7s ease;
+  }
+  .slider-images .slider-img:first-child, .slider-images .slider-img:last-child{
+    height: 480px;
+  }
+  .slider-images .slider-img:nth-child(2){
+    height: 560px;
+  }
+  .slider-images .slider-img:nth-child(3){
+    height: 480px;
+  }
+  .sliderh1 {
+    font-family: "Jost", sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 75%;
+    left: -6%;
+    transform: rotate(270deg);
+    transition: 0.7s ease;
+    color: #004080;
+  }
+  section .sliderh1 {
+    left: -20%;
+  }
+  .details{
+    position: absolute;
+    bottom: 43px;
+    left: 43px;
+  }
+  .details h2{
+    font-family: "Jost", sans-serif;
+    font-size: 30px;
+    font-weight: 1000;
+    text-align: left;
+    line-height: 44px;
+    text-align: left;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.7s ease;
+    display: none;
+    margin-left: 40px;
+  }
+  .details p{
+    font-family: "Jost", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 33px;
+    text-align: left;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.7s ease;
+    display: none;
+    margin-bottom: 70px;
+    margin-left: 40px;
+  }
+  .slider-img.active{
+    width: 766px !important;
+    height: 750px !important;
+  }
+  .slider-img.active h1{
+     display: none;
+  }
+  .slider-img.active .details p, .slider-img.active .details h2{
+    display: block;
+  }
+  
+.indication-loc {
+    margin-top: -150px;
+    color: grey;
+    opacity: 0.5;
+}
+
+.bluesep {
+    width: 100%;
+    height: 10px;
+    background-color: #004080;
+    margin-bottom: 2px;
+}
+
+.yellowsep {
+    width: 100%;
+    height: 10px;
+    background: radial-gradient(circle, rgba(209,181,39,0.8730085784313726) 0%, rgba(0,64,128,0.9850533963585434) 85%);
+    margin-bottom: 2px;
+}
+/* Galerie photo des coachs */
+.gallery-container {
+    background: #004080;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 500px;
+    flex-direction: column;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center; 
+    gap: 2rem;
+}
+
+.gallery img {
+    width: 300px; 
+    height: 300px; 
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Effet au survol des images */
+.gallery img:hover {
+    transform: scale(1.05); /* Agrandit légèrement */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Accentue l'ombre */
+}
+
+.gallery-container h1 {
+    color: white;
+    padding-top: 80px;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.trainer-info {
+    color: white;
+}
+
+/* Galerie initialement masquée */
+#gallery {
+    display: none;
+    margin-bottom: 100px;
+}
+
+/* Message à afficher lorsque aucune salle n'est sélectionnée */
+#select-message {
+    color: #fada39;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 100;
+}
+
+/* Equipements: */
+.equipement-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.equipement-carousel {
+    width: 100%;
+    overflow: hidden; 
+    padding: 60px 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+.equipement-carousel:hover .equipement-images {
+    animation-play-state: paused;
+}
+
+.equipement-carousel:before ,
+.equipement-carousel:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content:"";
+    z-index: 2;
+}
+
+.equipement-carousel:before {
+    left: 0;
+    background: linear-gradient(to left, transparent, #f4f4f4);
+}
+
+.equipement-carousel:after {
+    right: 0;
+    background: linear-gradient(to right, transparent, #f4f4f4);
+}
+
+@keyframes caroussel {
+    from {
+        transform: translateX(0); 
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+.equipement-images {
+    display: inline-block;
+    animation: 7s caroussel infinite linear;
+}
+
+.equipement-images img {
+    width: 200px;  
+    height: 200px; 
+    margin: 0 20px; 
+    object-fit: cover;
+    transition: transform 0.3s ease; 
+}
+
+.equipement-images img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+/* Tableau (Cours) */
+main table {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-collapse: collapse;
+}
+
+main table th, main table td {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+main table th {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+main table tr:nth-child(even) {
+    background-color: var(--secondary-color);
+}
+
+main table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Formulaire (Contact) */
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: var(--nav-bg-color);
+}
+
+/* Pied de page */
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}

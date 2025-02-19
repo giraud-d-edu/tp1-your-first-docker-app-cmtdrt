@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nous Contacter - Nom de l'entreprise</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo-container">
+                    <img class="logo" src="images/logo.png" alt="logo" />
+                </div>
+                <ul>
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="centres.html">Centres</a></li>
+                    <li><a href="installations.html">Installations</a></li>
+                    <li><a href="cours.html">Cours</a></li>
+                    <li><a href="contact.html">Nous contacter</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Nous Contacter</h1>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </main>
+    <div class="yellowsep" style="margin-bottom: -35px;"></div>
+    <footer>
+        <p>&copy; Timothy Fleiter. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

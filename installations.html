@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installations - Nom de l'entreprise</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo-container">
+                    <img class="logo" src="images/logo.png" alt="logo" />
+                </div>
+                <ul>
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="centres.html">Centres</a></li>
+                    <li><a href="installations.html">Installations</a></li>
+                    <li><a href="cours.html">Cours</a></li>
+                    <li><a href="contact.html">Nous contacter</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1 class="sliderh1">Nos Salles</h1>
+        <p style="margin-top: 30px"> <strong>Découvrez nos salles, équipements, et entraîneurs diplômés d'État </strong></p>
+        <h1> Sélectionnez une salle: </h1>
+        <section class="slider-container">
+            <div class="slider-images">
+              <div class="slider-img">
+                <img src="images/FitnessPark.jpg" alt="1" />
+                <h1 class="sliderh1">1</h1>
+                <div class="details">
+                  <h2>Fitness Park</h2>
+                  <a href="https://www.google.fr/maps/search/Port+Tino+Rossi/@41.9180292,8.7401404,17z?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">
+                    <p>--> Port Tino Rossi</p>
+                  </a>
+                </div>
+              </div>
+              <div class="slider-img">
+                <img src="images/BasicFit.jpg" alt="2" />
+                <h1 class="sliderh1">2</h1>
+                <div class="details">
+                  <h2>Basic Fit</h2>
+                  <a href="https://www.google.fr/maps/place/Rue+Paul+Colonna+d'Istria,+20090+Ajaccio/@41.9343279,8.7359801,17z/data=!3m1!4b1!4m6!3m5!1s0x12da698566a7b9a1:0xbf637255b72c4d92!8m2!3d41.9343239!4d8.738555!16s%2Fg%2F1wcj_nzv?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">
+                    <p>--> Rue Paul Colonna d'Istria</p>
+                  </a>
+                </div>
+              </div>
+              <div class="slider-img">
+                <img src="images/OrangeBleue.jpg" alt="3" />
+                <h1 class="sliderh1">3</h1>
+                <div class="details">
+                  <h2>L'Orange bleue</h2>
+                  <a href="https://www.google.fr/maps/place/route+de+l'ancienne+Batterie+d'Aspretto/@41.927955,8.7612751,17z/data=!3m1!4b1!4m6!3m5!1s0x12da6b3a7cce5fb3:0xad195a904b575194!8m2!3d41.927951!4d8.76385!16s%2Fg%2F11jfvvw74f?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">
+                    <p>--> Route de l'Ancienne Batterie d'Aspretto</p>
+                  </a>
+                </div>
+              </div>
+        </section>
+          <p class="indication-loc"> <i>(Cliquez sur l'emplacement des salles pour voir leur localisation Google Maps)</i></p>
+          <script src="script.js"></script>
+          <script>
+            jQuery(document).ready(function ($) {
+              $(".slider-img").on("click", function () {
+                $(".slider-img").removeClass("active");
+                $(this).addClass("active");
+              });
+            });
+          </script>
+        <div class="bluesep"></div>
+        <div class="yellowsep"></div>
+        <div class="gallery-container" id="gallery-container">
+            <h1 style="color: white; margin-top: 50px">Nos entraîneurs diplômés d'État</h1>
+            <p id="select-message"><i>Sélectionnez une salle pour découvrir ses entraîneurs !</i></p>
+            <div class="gallery" id="gallery" style="display: none;">
+                <div class="gallery-item">
+                    <img src="" alt="Coach 1" class="gallery-image">
+                    <p class="trainer-info"></p>
+                </div>
+                <div class="gallery-item">
+                    <img src="" alt="Coach 2" class="gallery-image">
+                    <p class="trainer-info"></p>
+                </div>
+            </div>
+        </div>
+        <script src="gallery.js"></script>
+        <div class="equipement-container">
+            <h2>Nos équipements sportifs</h2>
+            <div class="equipement-carousel">
+                <div class="equipement-images">
+                    <img src="images/equipements/eq1.jpeg">
+                    <img src="images/equipements/eq2.jpeg">
+                    <img src="images/equipements/eq3.jpeg">
+                    <img src="images/equipements/eq4.jpeg">
+                    <img src="images/equipements/eq5.jpeg">
+                    <img src="images/equipements/eq6.jpeg">
+                    <img src="images/equipements/eq7.jpeg">
+                </div>
+                <div class="equipement-images">
+                    <img src="images/equipements/eq1.jpeg">
+                    <img src="images/equipements/eq2.jpeg">
+                    <img src="images/equipements/eq3.jpeg">
+                    <img src="images/equipements/eq4.jpeg">
+                    <img src="images/equipements/eq5.jpeg">
+                    <img src="images/equipements/eq6.jpeg">
+                    <img src="images/equipements/eq7.jpeg">
+                </div>
+            </div>
+        </div>
+        <script src="equipements.js"></script>
+    </main>
+    <div class="yellowsep" style="margin-bottom: -35px;"></div>
+    <footer>
+        <p>&copy; Timothy Fleiter. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
